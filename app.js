@@ -26,6 +26,7 @@ const translations = {
     kids: "أطفال",
     bags: "شنط",
     shoes: "أحذية",
+    shoeStyle: "خطوة مريحة كل يوم",
     newArrivals: "وصل حديثًا",
     seasonOffers: "عروض الموسم",
     newSeason: "تشكيلة الموسم الجديد",
@@ -69,11 +70,21 @@ const translations = {
     shopOffers: "تسوّق العروض",
     deliveryAndReturns: "التوصيل والاستبدال",
     deliveryInfoTitle: "التوصيل",
-    deliveryInfo: "توصيل مجاني للطلبات فوق ١٥٠٠ ج.م. تفاصيل التكلفة والموعد تتأكد عند الطلب.",
+    deliveryInfo: "تكلفة الشحن [تكلفة الشحن]، ومدة التوصيل [مدة التوصيل]. الشحن مجاني للطلبات من ١٥٠٠ جنيه.",
     askAboutDelivery: "اسأل عن تفاصيل التوصيل",
     returnInfoTitle: "الاستبدال",
-    returnInfo: "تواصل معنا لمعرفة شروط ومدة الاستبدال قبل تأكيد طلبك.",
+    returnInfo: "يمكنك طلب الاستبدال خلال [مدة الاستبدال] وفق الشروط التالية: [شروط الاستبدال].",
     askAboutReturns: "اسأل عن شروط الاستبدال",
+    paymentMethodsTitle: "طرق الدفع",
+    paymentMethodsInfo: "[الدفع عند الاستلام / فودافون كاش / ...]",
+    reviewsEyebrow: "تجارب تسعدنا",
+    reviewsTitle: "آراء العملاء",
+    customerRating: "تقييم العميل",
+    testimonialCustomer: "اسم العميل",
+    testimonialQuote: "اكتب رأي العميل هنا",
+    shippingRemainingPrefix: "فاضل",
+    shippingRemainingSuffix: "ويبقى التوصيل مجاني",
+    freeShippingReached: "التوصيل مجاني 🎉",
     footerDescription: "اختيارات مريحة لكل يوم، ولكل أفراد العيلة.",
     copyright: "© ٢٠٢٦ ستايلك — جميع الحقوق محفوظة",
     yourPicks: "اختياراتك كلها هنا",
@@ -86,16 +97,18 @@ const translations = {
     orderMessageGreeting: "السلام عليكم، أريد تأكيد طلب من متجر ستايلك:",
     orderLine: "• {name} × {quantity} — {unitPrice} للوحدة، الإجمالي {lineTotal}",
     orderSubtotal: "إجمالي المنتجات قبل التوصيل: {subtotal}",
-    orderFreeDelivery: "التوصيل مجاني للطلبات فوق ١٥٠٠ ج.م.",
+    orderFreeDelivery: "التوصيل مجاني للطلبات من ١٥٠٠ جنيه.",
     orderDeliveryToConfirm: "تكلفة وموعد التوصيل يتأكدان مع المتجر.",
-    orderCustomerDetails: "الاسم: {name}\nرقم الهاتف: {phone}\nالعنوان بالتفصيل: {address}",
+    orderCustomerDetails: "الاسم: {name}\nرقم الهاتف: {phone}\nالمحافظة: {governorate}\nالعنوان بالتفصيل: {address}",
     customerName: "الاسم",
     phoneNumber: "رقم الهاتف",
+    governorate: "المحافظة",
+    selectGovernorate: "اختر المحافظة",
     fullAddress: "العنوان بالتفصيل",
     checkoutInstructions: "هنفتح واتساب برسالة الطلب، والمتجر هيأكد تكلفة وموعد التوصيل.",
     sendOrder: "إرسال الطلب عبر واتساب",
     backToCart: "العودة للسلة",
-    requiredFields: "من فضلك راجع الاسم ورقم الهاتف والعنوان.",
+    requiredFields: "من فضلك راجع الاسم ورقم الهاتف والمحافظة والعنوان.",
     orderSizePrompt: "المقاس المطلوب لكل منتج:",
     orderConfirmPrompt: "برجاء تأكيد توفر المقاسات والطلب.",
     sale20: "خصم ٢٠٪",
@@ -129,11 +142,13 @@ const translations = {
     addToCart: "أضف للسلة",
     productsCount: "عرض {count} منتج",
     productsCountPlural: "عرض {count} منتجات",
+    productsCountOne: "عرض منتج واحد",
+    productsCountTwo: "عرض منتجان",
     cartItemCount: "{count} منتجات في السلة",
     quantity: "الكمية",
     decreaseQuantity: "تقليل الكمية",
     increaseQuantity: "زيادة الكمية",
-    removeProduct: "حذف {name} من السلة",
+    removeProduct: "حذف المنتج",
     addedToCart: "اتضاف المنتج لسلة مشترياتك.",
     addedToFavorites: "اتضاف المنتج للمفضلة.",
     removedFromFavorites: "اتشال المنتج من المفضلة.",
@@ -172,6 +187,7 @@ const translations = {
     kids: "Kids",
     bags: "Bags",
     shoes: "Shoes",
+    shoeStyle: "Comfort in every step",
     newArrivals: "New arrivals",
     seasonOffers: "Seasonal offers",
     newSeason: "The new season collection",
@@ -215,11 +231,21 @@ const translations = {
     shopOffers: "Shop the offers",
     deliveryAndReturns: "Delivery & exchanges",
     deliveryInfoTitle: "Delivery",
-    deliveryInfo: "Free delivery on orders over EGP 1,500. Cost and timing are confirmed when you order.",
+    deliveryInfo: "Shipping costs [shipping cost], and delivery takes [delivery time]. Free shipping on orders of EGP 1,500 or more.",
     askAboutDelivery: "Ask about delivery",
     returnInfoTitle: "Exchanges",
-    returnInfo: "Contact us to confirm exchange terms and timing before placing your order.",
+    returnInfo: "You can request an exchange within [exchange period], subject to: [exchange conditions].",
     askAboutReturns: "Ask about exchange terms",
+    paymentMethodsTitle: "Payment methods",
+    paymentMethodsInfo: "[Cash on delivery / Vodafone Cash / ...]",
+    reviewsEyebrow: "Your experience matters",
+    reviewsTitle: "Customer reviews",
+    customerRating: "Customer rating",
+    testimonialCustomer: "Customer name",
+    testimonialQuote: "Add the customer's review here",
+    shippingRemainingPrefix: "Only",
+    shippingRemainingSuffix: "left for free shipping",
+    freeShippingReached: "Free shipping 🎉",
     footerDescription: "Easy everyday picks for everyone in the family.",
     copyright: "© 2026 Setaylak — All rights reserved",
     yourPicks: "Your picks, all in one place",
@@ -232,16 +258,18 @@ const translations = {
     orderMessageGreeting: "Hello, I'd like to place an order with Setaylak:",
     orderLine: "• {name} × {quantity} — {unitPrice} each, total {lineTotal}",
     orderSubtotal: "Product subtotal before delivery: {subtotal}",
-    orderFreeDelivery: "Delivery is free on orders over EGP 1,500.",
+    orderFreeDelivery: "Delivery is free on orders of EGP 1,500 or more.",
     orderDeliveryToConfirm: "Please confirm delivery cost and timing with the store.",
-    orderCustomerDetails: "Name: {name}\nPhone number: {phone}\nFull address: {address}",
+    orderCustomerDetails: "Name: {name}\nPhone number: {phone}\nGovernorate: {governorate}\nFull address: {address}",
     customerName: "Name",
     phoneNumber: "Phone number",
+    governorate: "Governorate",
+    selectGovernorate: "Select a governorate",
     fullAddress: "Full address",
     checkoutInstructions: "We'll open WhatsApp with your order. The store will confirm delivery cost and timing.",
     sendOrder: "Send order on WhatsApp",
     backToCart: "Back to cart",
-    requiredFields: "Please check your name, phone number, and address.",
+    requiredFields: "Please check your name, phone number, governorate, and address.",
     orderSizePrompt: "Requested size for each product:",
     orderConfirmPrompt: "Please confirm size availability and the order.",
     sale20: "20% off",
@@ -275,11 +303,13 @@ const translations = {
     addToCart: "Add to cart",
     productsCount: "Showing {count} product",
     productsCountPlural: "Showing {count} products",
+    productsCountOne: "Showing one product",
+    productsCountTwo: "Showing two products",
     cartItemCount: "{count} items in cart",
     quantity: "Quantity",
     decreaseQuantity: "Decrease quantity",
     increaseQuantity: "Increase quantity",
-    removeProduct: "Remove {name} from cart",
+    removeProduct: "Remove product",
     addedToCart: "Added to your cart.",
     addedToFavorites: "Added to favorites.",
     removedFromFavorites: "Removed from favorites.",
@@ -295,6 +325,59 @@ const translations = {
 
 // بيانات المنتجات قابلة للتعديل دون لمس منطق البحث والسلة في catalog.js.
 const products = window.STORE_PRODUCTS;
+const FREE_SHIPPING_THRESHOLD = 1500;
+const governorates = [
+  { value: "cairo", nameAr: "القاهرة", nameEn: "Cairo" },
+  { value: "giza", nameAr: "الجيزة", nameEn: "Giza" },
+  { value: "alexandria", nameAr: "الإسكندرية", nameEn: "Alexandria" },
+  { value: "dakahlia", nameAr: "الدقهلية", nameEn: "Dakahlia" },
+  { value: "red-sea", nameAr: "البحر الأحمر", nameEn: "Red Sea" },
+  { value: "beheira", nameAr: "البحيرة", nameEn: "Beheira" },
+  { value: "fayoum", nameAr: "الفيوم", nameEn: "Fayoum" },
+  { value: "gharbia", nameAr: "الغربية", nameEn: "Gharbia" },
+  { value: "ismailia", nameAr: "الإسماعيلية", nameEn: "Ismailia" },
+  { value: "monufia", nameAr: "المنوفية", nameEn: "Monufia" },
+  { value: "minya", nameAr: "المنيا", nameEn: "Minya" },
+  { value: "qalyubia", nameAr: "القليوبية", nameEn: "Qalyubia" },
+  { value: "new-valley", nameAr: "الوادي الجديد", nameEn: "New Valley" },
+  { value: "suez", nameAr: "السويس", nameEn: "Suez" },
+  { value: "aswan", nameAr: "أسوان", nameEn: "Aswan" },
+  { value: "asyut", nameAr: "أسيوط", nameEn: "Asyut" },
+  { value: "beni-suef", nameAr: "بني سويف", nameEn: "Beni Suef" },
+  { value: "port-said", nameAr: "بورسعيد", nameEn: "Port Said" },
+  { value: "damietta", nameAr: "دمياط", nameEn: "Damietta" },
+  { value: "sharqia", nameAr: "الشرقية", nameEn: "Sharqia" },
+  { value: "south-sinai", nameAr: "جنوب سيناء", nameEn: "South Sinai" },
+  { value: "kafr-el-sheikh", nameAr: "كفر الشيخ", nameEn: "Kafr El Sheikh" },
+  { value: "matrouh", nameAr: "مطروح", nameEn: "Matrouh" },
+  { value: "luxor", nameAr: "الأقصر", nameEn: "Luxor" },
+  { value: "qena", nameAr: "قنا", nameEn: "Qena" },
+  { value: "north-sinai", nameAr: "شمال سيناء", nameEn: "North Sinai" },
+  { value: "sohag", nameAr: "سوهاج", nameEn: "Sohag" },
+];
+const testimonials = [
+  {
+    nameAr: "[اسم العميل]",
+    nameEn: "[Customer name]",
+    quoteAr: "[اكتب رأي العميل هنا]",
+    quoteEn: "[Add the customer's review here]",
+    rating: "★★★★★",
+  },
+  {
+    nameAr: "[اسم العميل]",
+    nameEn: "[Customer name]",
+    quoteAr: "[اكتب رأي العميل هنا]",
+    quoteEn: "[Add the customer's review here]",
+    rating: "★★★★★",
+  },
+  {
+    nameAr: "[اسم العميل]",
+    nameEn: "[Customer name]",
+    quoteAr: "[اكتب رأي العميل هنا]",
+    quoteEn: "[Add the customer's review here]",
+    rating: "★★★★★",
+  },
+];
 const categoryKeys = {
   رجالي: "men",
   حريمي: "women",
@@ -318,8 +401,15 @@ const cartFooter = document.querySelector("#cart-footer");
 const checkoutButton = document.querySelector("#checkout-button");
 const checkoutForm = document.querySelector("#checkout-form");
 const checkoutName = document.querySelector("#checkout-name");
+const checkoutGovernorate = document.querySelector("#checkout-governorate");
 const cartCount = document.querySelector("#cart-count");
 const cartTotal = document.querySelector("#cart-total");
+const shippingProgressMessage = document.querySelector("#shipping-progress-message");
+const shippingProgressPrefix = document.querySelector("#shipping-progress-prefix");
+const shippingProgressAmount = document.querySelector("#shipping-progress-amount");
+const shippingProgressSuffix = document.querySelector("#shipping-progress-suffix");
+const shippingProgressTrack = document.querySelector("#shipping-progress-track");
+const shippingProgressFill = document.querySelector("#shipping-progress-fill");
 const toast = document.querySelector("#toast");
 
 let activeCategory = "all";
@@ -422,8 +512,55 @@ function changePreviewImage(direction) {
 
 function formatPrice(price) {
   return currentLanguage === "ar"
-    ? `${numberFormatter.format(price)} ج.م`
+    ? `${numberFormatter.format(price)} جنيه`
     : currencyFormatter.format(price);
+}
+
+function renderGovernorates() {
+  const selectedValue = checkoutGovernorate.value;
+  checkoutGovernorate.replaceChildren();
+
+  const placeholder = document.createElement("option");
+  placeholder.value = "";
+  placeholder.textContent = translate("selectGovernorate");
+  checkoutGovernorate.append(placeholder);
+
+  governorates.forEach((governorate) => {
+    const option = document.createElement("option");
+    option.value = governorate.value;
+    option.textContent =
+      currentLanguage === "ar" ? governorate.nameAr : governorate.nameEn;
+    checkoutGovernorate.append(option);
+  });
+  checkoutGovernorate.value = selectedValue;
+}
+
+function renderTestimonials() {
+  const reviewsGrid = document.querySelector("#reviews-grid");
+  reviewsGrid.replaceChildren();
+
+  testimonials.forEach((testimonial) => {
+    const card = document.createElement("article");
+    card.className = "review-card";
+
+    const rating = document.createElement("p");
+    rating.className = "review-rating";
+    rating.setAttribute("role", "img");
+    rating.setAttribute("aria-label", translate("customerRating"));
+    rating.textContent = testimonial.rating;
+
+    const quote = document.createElement("blockquote");
+    quote.textContent =
+      currentLanguage === "ar" ? testimonial.quoteAr : testimonial.quoteEn;
+
+    const customer = document.createElement("p");
+    customer.className = "review-customer";
+    customer.textContent =
+      currentLanguage === "ar" ? testimonial.nameAr : testimonial.nameEn;
+
+    card.append(rating, quote, customer);
+    reviewsGrid.append(card);
+  });
 }
 
 function applyLanguage() {
@@ -457,6 +594,7 @@ function applyLanguage() {
   document.querySelectorAll("[data-i18n-content]").forEach((element) => {
     element.setAttribute("content", translate(element.dataset.i18nContent));
   });
+  renderGovernorates();
 
   const languageButton = document.querySelector("#language-toggle");
   languageButton.textContent = isArabic ? "EN" : "عربي";
@@ -464,6 +602,7 @@ function applyLanguage() {
   languageButton.setAttribute("title", translate("language"));
 
   renderProducts();
+  renderTestimonials();
   updateCart();
 }
 
@@ -553,7 +692,9 @@ function productCard(product) {
           <img
             class="product-image"
             ${getProductImageAttributes(product.image)}
-            alt=""
+            alt="${productName}"
+            width="640"
+            height="800"
             loading="lazy"
             decoding="async"
             data-product-image="${product.id}"
@@ -582,8 +723,8 @@ function productCard(product) {
         </div>
         ${product.rating ? `<p class="product-rating" role="img" aria-label="${ratingText}">★★★★★ <span>${product.rating}</span></p>` : ""}
         <div class="product-price-row">
-          <span class="product-price">${formatPrice(product.price)}</span>
-          ${product.oldPrice ? `<span class="old-price">${formatPrice(product.oldPrice)}</span>` : ""}
+          <span class="product-price" dir="ltr">${formatPrice(product.price)}</span>
+          ${product.oldPrice ? `<span class="old-price" dir="ltr">${formatPrice(product.oldPrice)}</span>` : ""}
         </div>
         <div class="product-actions">
           <button class="add-to-cart" type="button" data-add-to-cart="${product.id}">
@@ -632,7 +773,18 @@ function renderProducts() {
   productGrid.innerHTML = visibleProducts.map(productCard).join("");
   emptyState.hidden = visibleProducts.length > 0;
   const count = numberFormatter.format(visibleProducts.length);
-  const countKey = visibleProducts.length === 1 ? "productsCount" : "productsCountPlural";
+  let countKey;
+  if (currentLanguage !== "ar") {
+    countKey = visibleProducts.length === 1 ? "productsCount" : "productsCountPlural";
+  } else if (visibleProducts.length === 1) {
+    countKey = "productsCountOne";
+  } else if (visibleProducts.length === 2) {
+    countKey = "productsCountTwo";
+  } else if (visibleProducts.length >= 3 && visibleProducts.length <= 10) {
+    countKey = "productsCountPlural";
+  } else {
+    countKey = "productsCount";
+  }
   resultsLabel.textContent = translate(countKey, { count });
 
   document.querySelectorAll(".filter-chip").forEach((button) => {
@@ -670,7 +822,7 @@ function buildWhatsAppOrderUrl(subtotal, customerDetails) {
     });
   });
   const deliveryMessage =
-    subtotal > 1500
+    subtotal >= FREE_SHIPPING_THRESHOLD
       ? translate("orderFreeDelivery")
       : translate("orderDeliveryToConfirm");
   const message = [
@@ -721,10 +873,10 @@ function updateCart() {
 
       return `
         <article class="cart-item">
-          <img class="cart-item-image" src="${selectedImage?.src || product.image}" alt="" loading="lazy" />
+          <img class="cart-item-image" src="${selectedImage?.src || product.image}" alt="${cartProductName}" width="76" height="83" loading="lazy" />
           <div>
             <h3 class="cart-item-title">${cartProductName}</h3>
-            <p class="cart-item-price">${formatPrice(product.price)}</p>
+            <p class="cart-item-price" dir="ltr">${formatPrice(product.price)}</p>
             <div class="quantity-controls" role="group" aria-label="${translate("quantity")}">
               <button type="button" aria-label="${translate("decreaseQuantity")}" data-quantity="-1" data-id="${product.id}" data-variant="${item.variant}">−</button>
               <span>${numberFormatter.format(item.quantity)}</span>
@@ -734,7 +886,8 @@ function updateCart() {
           <button
             class="remove-item"
             type="button"
-            aria-label="${translate("removeProduct", { name: cartProductName })}"
+            aria-label="${translate("removeProduct")}"
+            title="${cartProductName}"
             data-remove="${product.id}"
             data-variant="${item.variant}"
           >×</button>
@@ -743,7 +896,26 @@ function updateCart() {
     })
     .join("");
 
-  cartTotal.textContent = currencyFormatter.format(subtotal);
+  cartTotal.textContent = formatPrice(subtotal);
+  const remainingForFreeShipping = Math.max(0, FREE_SHIPPING_THRESHOLD - subtotal);
+  const shippingIsFree = subtotal >= FREE_SHIPPING_THRESHOLD;
+  shippingProgressPrefix.textContent = shippingIsFree
+    ? translate("freeShippingReached")
+    : translate("shippingRemainingPrefix");
+  shippingProgressAmount.textContent = shippingIsFree
+    ? ""
+    : formatPrice(remainingForFreeShipping);
+  shippingProgressSuffix.textContent = shippingIsFree
+    ? ""
+    : translate("shippingRemainingSuffix");
+  shippingProgressMessage.classList.toggle("is-free", shippingIsFree);
+  shippingProgressTrack.setAttribute(
+    "aria-valuenow",
+    String(Math.min(subtotal, FREE_SHIPPING_THRESHOLD)),
+  );
+  shippingProgressFill.style.width = `${
+    (Math.min(subtotal, FREE_SHIPPING_THRESHOLD) / FREE_SHIPPING_THRESHOLD) * 100
+  }%`;
   saveCart();
 }
 
@@ -924,9 +1096,18 @@ checkoutForm.addEventListener("submit", (event) => {
   const customerDetails = {
     name: checkoutName.value.trim(),
     phone: document.querySelector("#checkout-phone").value.trim(),
+    governorate:
+      governorates.find(({ value }) => value === checkoutGovernorate.value)?.[
+        currentLanguage === "ar" ? "nameAr" : "nameEn"
+      ] || "",
     address: document.querySelector("#checkout-address").value.trim(),
   };
-  if (!customerDetails.name || !customerDetails.phone || !customerDetails.address) {
+  if (
+    !customerDetails.name ||
+    !customerDetails.phone ||
+    !customerDetails.governorate ||
+    !customerDetails.address
+  ) {
     showToast(translate("requiredFields"));
     return;
   }
@@ -1006,3 +1187,6 @@ document.addEventListener("keydown", (event) => {
 });
 
 applyLanguage();
+if (new URLSearchParams(window.location.search).get("openCart") === "1") {
+  openCart();
+}

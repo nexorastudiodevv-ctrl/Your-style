@@ -245,4 +245,47 @@ window.STORE_PRODUCTS = [
       "Choose two home pajama sets and get a long robe as a gift. Comfort and style in one look.",
     image: "assets/products/home-pajama-bundle.webp",
   },
+  {
+    id: 17,
+    nameAr: "سوت بناتي قطعتين مربعات من Usine",
+    nameEn: "Usine Girls' Two-Piece Checkered Set",
+    category: "kids",
+    price: 395,
+    tag: "exclusivePrice",
+    descriptionAr:
+      "سوت بناتي قطعتين بنقشة مربعات وأستيك على الوسط، بخامة سنجل ليكرا قطن ناعمة وألوان مميزة. متاح بالمقاسات ٤، ٦، ٨، ١٠، ١٢، ١٣. خصم خاص للكميات وأصحاب المحلات التجارية.",
+    descriptionEn:
+      "A two-piece girls' set with a checkered print and elastic waist, made from soft cotton single Lycra in standout colors. Available in sizes 4, 6, 8, 10, 12, and 13. Special bulk discounts for retailers.",
+    sizes: {
+      ar: "٤، ٦، ٨، ١٠، ١٢، ١٣",
+      en: "4, 6, 8, 10, 12, 13",
+    },
+    image: "assets/products/kids-usine-checkered-blue.webp",
+    images: [
+      {
+        src: "assets/products/kids-usine-checkered-blue.webp",
+        colorAr: "أزرق",
+        colorEn: "Blue",
+        color: "#53b4c9",
+      },
+      {
+        src: "assets/products/kids-usine-checkered-coral.webp",
+        colorAr: "مرجاني",
+        colorEn: "Coral",
+        color: "#e87868",
+      },
+      {
+        src: "assets/products/kids-usine-checkered-green.webp",
+        colorAr: "أخضر",
+        colorEn: "Green",
+        color: "#b5c65c",
+      },
+      {
+        src: "assets/products/kids-usine-checkered-orange.webp",
+        colorAr: "برتقالي",
+        colorEn: "Orange",
+        color: "#ee9a35",
+      },
+    ],
+  },
 ];

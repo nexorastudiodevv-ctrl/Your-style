@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="تسوّق الشنط من ستايلك." />
+    <meta property="og:title" content="شنط | ستايلك" />
+    <meta property="og:description" content="تسوّق الشنط من ستايلك." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ar_EG" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1483985988355-763728e1935b?fm=webp&amp;fit=crop&amp;w=1200&amp;q=70" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>شنط | ستايلك</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=cairo-3" />
+    <script src="catalog.js" defer></script>
+    <script src="category-page.js?v=1" defer></script>
+  </head>
+  <body data-category="bags">
+    <header class="category-page-header">
+      <a class="brand" href="index.html" aria-label="ستايلك - الصفحة الرئيسية">
+        <span class="brand-mark" aria-hidden="true">س</span><span class="brand-name">ستايلك</span><span class="brand-dot">.</span>
+      </a>
+      <nav class="category-page-nav" id="category-nav" aria-label="أقسام المتجر">
+        <a id="category-home-nav" href="index.html">الرئيسية</a>
+        <a href="men.html" data-category-link="men">رجالي</a>
+        <a href="women.html" data-category-link="women">حريمي</a>
+        <a href="kids.html" data-category-link="kids">أطفال</a>
+        <a href="bags.html" data-category-link="bags">شنط</a>
+        <a href="shoes.html" data-category-link="shoes">أحذية</a>
+      </nav>
+      <div class="category-page-actions">
+        <button id="category-language-toggle" class="language-button" type="button" aria-label="التبديل إلى الإنجليزية">EN</button>
+        <a class="category-cart-link" href="index.html?openCart=1#cart" aria-label="افتح سلة المشتريات">
+          🛍 <span id="category-cart-count" aria-live="polite">0</span> <span id="category-cart-label">السلة</span>
+        </a>
+      </div>
+    </header>
+    <main class="page-width category-page-main">
+      <a class="text-link category-home-link" id="category-home-link" href="index.html">← العودة للمتجر</a>
+      <section class="category-page-intro" aria-labelledby="category-title">
+        <p class="eyebrow" id="category-tagline">ستايلك لكل يوم</p>
+        <h1 id="category-title">تسوّق قسم شنط</h1>
+        <p id="category-description">تصفّح منتجات قسم شنط وأضف اختياراتك إلى السلة.</p>
+      </section>
+      <section class="products-section category-page-products" aria-labelledby="category-products-title">
+        <h2 id="category-products-title" class="sr-only">منتجات القسم</h2>
+        <div class="product-grid" id="category-product-grid"></div>
+        <p id="category-status" class="category-status" role="status" aria-live="polite"></p>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="page-width footer-inner">
+        <a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">س</span><span class="brand-name">ستايلك</span><span class="brand-dot">.</span></a>
+        <a class="footer-about-link" id="category-footer-link" href="index.html#about">عن ستايلك</a>
+      </div>
+    </footer>
+  </body>
+</html>

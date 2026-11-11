@@ -8,8 +8,40 @@
       content="اكتشف أحدث الملابس والأحذية والشنط لكل أفراد الأسرة."
       data-i18n-content="metaDescription"
     />
+    <meta property="og:title" content="ستايلك | اختار اللي يشبهك" />
+    <meta
+      property="og:description"
+      content="اكتشف أحدث الملابس والأحذية والشنط لكل أفراد الأسرة."
+    />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1483985988355-763728e1935b?fm=webp&amp;fit=crop&amp;w=1200&amp;q=70"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ar_EG" />
+    <meta
+      property="og:url"
+      content="https://nexorastudiodevv-ctrl.github.io/Your-style/"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ستايلك | اختار اللي يشبهك" />
+    <meta
+      name="twitter:description"
+      content="اكتشف أحدث الملابس والأحذية والشنط لكل أفراد الأسرة."
+    />
+    <meta
+      name="twitter:image"
+      content="https://images.unsplash.com/photo-1483985988355-763728e1935b?fm=webp&amp;fit=crop&amp;w=1200&amp;q=70"
+    />
     <title>ستايلك | اختار اللي يشبهك</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="preload"
       as="image"
@@ -18,9 +50,24 @@
       imagesizes="(max-width: 508px) calc(100vw - 28px), (max-width: 640px) 480px, (max-width: 1228px) calc(100vw - 48px), 1180px"
       fetchpriority="high"
     />
-    <link rel="stylesheet" href="styles.css?v=amiri-2" />
+    <link rel="stylesheet" href="styles.css?v=cairo-3" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Store",
+        "name": "ستايلك",
+        "url": "https://nexorastudiodevv-ctrl.github.io/Your-style/",
+        "telephone": "+201152183562",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+201152183562",
+          "contactType": "customer service",
+          "availableLanguage": ["Arabic", "English"]
+        }
+      }
+    </script>
     <script src="catalog.js" defer></script>
-    <script src="app.js" defer></script>
+    <script src="app.js?v=category-cart-3" defer></script>
   </head>
   <body>
     <div class="announcement">
@@ -80,9 +127,8 @@
             aria-controls="cart-panel"
             aria-expanded="false"
           >
-            <span class="cart-icon" aria-hidden="true">🛍</span>
+            <span class="cart-icon" aria-hidden="true">🛍<span class="cart-count" id="cart-count">0</span></span>
             <span><small data-i18n="yourCart">مشترياتك</small><strong data-i18n="cartLabel">السلة</strong></span>
-            <span class="cart-count" id="cart-count" aria-hidden="true">0</span>
           </button>
         </div>
       </div>
@@ -90,11 +136,11 @@
       <nav class="category-nav" aria-label="الأقسام الرئيسية" data-i18n-aria-label="mainCategories">
         <div class="nav-inner">
           <button class="menu-button" type="button" data-category="all">☰ <span data-i18n="allCategories">كل الأقسام</span></button>
-          <button type="button" data-category="men" data-i18n="men">رجالي</button>
-          <button type="button" data-category="women" data-i18n="women">حريمي</button>
-          <button type="button" data-category="kids" data-i18n="kids">أطفال</button>
-          <button type="button" data-category="bags" data-i18n="bags">شنط</button>
-          <button type="button" data-category="shoes" data-i18n="shoes">أحذية</button>
+          <a href="men.html" data-i18n="men">رجالي</a>
+          <a href="women.html" data-i18n="women">حريمي</a>
+          <a href="kids.html" data-i18n="kids">أطفال</a>
+          <a href="bags.html" data-i18n="bags">شنط</a>
+          <a href="shoes.html" data-i18n="shoes">أحذية</a>
           <a href="#products" data-i18n="newArrivals">وصل حديثًا</a>
           <a href="#offers" class="sale-link" data-i18n="seasonOffers">عروض الموسم</a>
           <a href="#about" data-i18n="aboutUs">عن ستايلك</a>
@@ -131,7 +177,7 @@
           <a class="text-link" href="#products"><span data-i18n="allProducts">كل المنتجات</span><span aria-hidden="true">←</span></a>
         </div>
         <div class="category-grid">
-          <button class="category-card category-men" type="button" data-category="men">
+          <a class="category-card category-men" href="men.html">
             <span class="category-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
                 <path d="m8 4 4 2 4-2 5 3-2 4-3-1v10H8V10l-3 1-2-4 5-3Z" />
@@ -140,8 +186,8 @@
             </span>
             <span><strong data-i18n="men">رجالي</strong><small data-i18n="everydayStyle">ستايل لكل يوم</small></span>
             <span class="category-arrow" aria-hidden="true">←</span>
-          </button>
-          <button class="category-card category-women" type="button" data-category="women">
+          </a>
+          <a class="category-card category-women" href="women.html">
             <span class="category-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
                 <path d="m9 3 3 2 3-2 2 5-2 2 4 10H5l4-10-2-2 2-5Z" />
@@ -150,8 +196,8 @@
             </span>
             <span><strong data-i18n="women">حريمي</strong><small data-i18n="yourStyle">اختيارات على ذوقك</small></span>
             <span class="category-arrow" aria-hidden="true">←</span>
-          </button>
-          <button class="category-card category-kids" type="button" data-category="kids">
+          </a>
+          <a class="category-card category-kids" href="kids.html">
             <span class="category-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 3 8 5 5 9v6l3 5h8l3-5V9l-3-4-4-2Z" />
@@ -160,8 +206,8 @@
             </span>
             <span><strong data-i18n="kids">أطفال</strong><small data-i18n="colorsAndJoy">ألوان وفرحة</small></span>
             <span class="category-arrow" aria-hidden="true">←</span>
-          </button>
-          <button class="category-card category-bags" type="button" data-category="bags">
+          </a>
+          <a class="category-card category-bags" href="bags.html">
             <span class="category-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M4 8h16l1 13H3L4 8Z" />
@@ -170,7 +216,17 @@
             </span>
             <span><strong data-i18n="bags">شنط</strong><small data-i18n="yourCompanion">رفيق مشاويرك</small></span>
             <span class="category-arrow" aria-hidden="true">←</span>
-          </button>
+          </a>
+          <a class="category-card category-shoes" href="shoes.html">
+            <span class="category-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 15.5c2.4 0 4.2-.8 5.4-2.4l1.2-1.6 2.4 2.1c1.7 1.5 3.8 2.4 6.1 2.4H21v3H3v-3.5Z" />
+                <path d="m8.4 13.1 2.1 1.4m1-3.2 2 2m-7.5 2.2h.01" />
+              </svg>
+            </span>
+            <span><strong data-i18n="shoes">أحذية</strong><small data-i18n="shoeStyle">خطوة مريحة كل يوم</small></span>
+            <span class="category-arrow" aria-hidden="true">←</span>
+          </a>
         </div>
       </section>
 
@@ -267,7 +323,7 @@
             </span>
             <div>
               <h3 data-i18n="deliveryInfoTitle">التوصيل</h3>
-              <p data-i18n="deliveryInfo">توصيل مجاني للطلبات فوق ١٥٠٠ ج.م. تفاصيل التكلفة والموعد تتأكد عند الطلب.</p>
+              <p data-i18n="deliveryInfo">تكلفة الشحن [تكلفة الشحن]، ومدة التوصيل [مدة التوصيل]. الشحن مجاني للطلبات من ١٥٠٠ جنيه.</p>
               <a href="https://wa.me/201152183562" target="_blank" rel="noopener noreferrer" data-i18n="askAboutDelivery">اسأل عن تفاصيل التوصيل</a>
             </div>
           </article>
@@ -280,11 +336,28 @@
             </span>
             <div>
               <h3 data-i18n="returnInfoTitle">الاستبدال</h3>
-              <p data-i18n="returnInfo">تواصل معنا لمعرفة شروط ومدة الاستبدال قبل تأكيد طلبك.</p>
+              <p data-i18n="returnInfo">يمكنك طلب الاستبدال خلال [مدة الاستبدال] وفق الشروط التالية: [شروط الاستبدال].</p>
               <a href="https://wa.me/201152183562" target="_blank" rel="noopener noreferrer" data-i18n="askAboutReturns">اسأل عن شروط الاستبدال</a>
             </div>
           </article>
+          <article class="service-info-card">
+            <span class="service-info-icon" aria-hidden="true">💳</span>
+            <div>
+              <h3 data-i18n="paymentMethodsTitle">طرق الدفع</h3>
+              <p data-i18n="paymentMethodsInfo">[الدفع عند الاستلام / فودافون كاش / ...]</p>
+            </div>
+          </article>
         </div>
+      </section>
+
+      <section class="reviews-section page-width" aria-labelledby="reviews-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow" data-i18n="reviewsEyebrow">تجارب تسعدنا</p>
+            <h2 id="reviews-title" data-i18n="reviewsTitle">آراء العملاء</h2>
+          </div>
+        </div>
+        <div class="reviews-grid" id="reviews-grid"></div>
       </section>
     </main>
 
@@ -334,7 +407,23 @@
         <p data-i18n="emptyCartHint">اختار المنتجات اللي عجبتك وهنحطها هنا.</p>
       </div>
       <div class="cart-footer" id="cart-footer" hidden>
-        <div class="subtotal-row"><span data-i18n="subtotal">الإجمالي</span><strong id="cart-total">٠ ج.م</strong></div>
+        <div class="shipping-progress">
+          <p id="shipping-progress-message" aria-live="polite">
+            <span id="shipping-progress-prefix"></span>
+            <bdi id="shipping-progress-amount" dir="ltr"></bdi>
+            <span id="shipping-progress-suffix"></span>
+          </p>
+          <div
+            class="shipping-progress-track"
+            id="shipping-progress-track"
+            role="progressbar"
+            aria-labelledby="shipping-progress-message"
+            aria-valuemin="0"
+            aria-valuemax="1500"
+            aria-valuenow="0"
+          ><span id="shipping-progress-fill"></span></div>
+        </div>
+        <div class="subtotal-row"><span data-i18n="subtotal">الإجمالي</span><strong id="cart-total" dir="ltr">٠ جنيه</strong></div>
         <p data-i18n="shippingAtCheckout">الشحن والخصومات يتم حسابهم عند تأكيد الطلب.</p>
         <button
           class="checkout-button"
@@ -347,6 +436,10 @@
           <input id="checkout-name" name="name" type="text" autocomplete="name" required />
           <label for="checkout-phone" data-i18n="phoneNumber">رقم الهاتف</label>
           <input id="checkout-phone" name="phone" type="tel" autocomplete="tel" required />
+          <label for="checkout-governorate" data-i18n="governorate">المحافظة</label>
+          <select id="checkout-governorate" name="governorate" autocomplete="address-level1" required>
+            <option value="" data-i18n="selectGovernorate">اختر المحافظة</option>
+          </select>
           <label for="checkout-address" data-i18n="fullAddress">العنوان بالتفصيل</label>
           <textarea id="checkout-address" name="address" autocomplete="street-address" rows="3" required></textarea>
           <p data-i18n="checkoutInstructions">هنفتح واتساب برسالة الطلب، والمتجر هيأكد تكلفة وموعد التوصيل.</p>
