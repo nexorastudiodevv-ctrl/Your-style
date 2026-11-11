@@ -86,7 +86,14 @@ const translations = {
     orderSubtotal: "إجمالي المنتجات قبل التوصيل: {subtotal}",
     orderFreeDelivery: "التوصيل مجاني للطلبات فوق ١٥٠٠ ج.م.",
     orderDeliveryToConfirm: "تكلفة وموعد التوصيل يتأكدان مع المتجر.",
-    orderCustomerDetails: "الاسم:\nرقم الهاتف:\nالعنوان بالتفصيل:",
+    orderCustomerDetails: "الاسم: {name}\nرقم الهاتف: {phone}\nالعنوان بالتفصيل: {address}",
+    customerName: "الاسم",
+    phoneNumber: "رقم الهاتف",
+    fullAddress: "العنوان بالتفصيل",
+    checkoutInstructions: "هنفتح واتساب برسالة الطلب، والمتجر هيأكد تكلفة وموعد التوصيل.",
+    sendOrder: "إرسال الطلب عبر واتساب",
+    backToCart: "العودة للسلة",
+    requiredFields: "من فضلك راجع الاسم ورقم الهاتف والعنوان.",
     orderSizePrompt: "المقاس المطلوب لكل منتج:",
     orderConfirmPrompt: "برجاء تأكيد توفر المقاسات والطلب.",
     sale20: "خصم ٢٠٪",
@@ -223,7 +230,14 @@ const translations = {
     orderSubtotal: "Product subtotal before delivery: {subtotal}",
     orderFreeDelivery: "Delivery is free on orders over EGP 1,500.",
     orderDeliveryToConfirm: "Please confirm delivery cost and timing with the store.",
-    orderCustomerDetails: "Name:\nPhone number:\nFull address:",
+    orderCustomerDetails: "Name: {name}\nPhone number: {phone}\nFull address: {address}",
+    customerName: "Name",
+    phoneNumber: "Phone number",
+    fullAddress: "Full address",
+    checkoutInstructions: "We'll open WhatsApp with your order. The store will confirm delivery cost and timing.",
+    sendOrder: "Send order on WhatsApp",
+    backToCart: "Back to cart",
+    requiredFields: "Please check your name, phone number, and address.",
     orderSizePrompt: "Requested size for each product:",
     orderConfirmPrompt: "Please confirm size availability and the order.",
     sale20: "20% off",
@@ -297,6 +311,9 @@ const cartBackdrop = document.querySelector("#drawer-backdrop");
 const cartItemsContainer = document.querySelector("#cart-items");
 const cartEmpty = document.querySelector("#cart-empty");
 const cartFooter = document.querySelector("#cart-footer");
+const checkoutButton = document.querySelector("#checkout-button");
+const checkoutForm = document.querySelector("#checkout-form");
+const checkoutName = document.querySelector("#checkout-name");
 const cartCount = document.querySelector("#cart-count");
 const cartTotal = document.querySelector("#cart-total");
 const toast = document.querySelector("#toast");
@@ -604,7 +621,7 @@ function showToast(message) {
   }, 2400);
 }
 
-function buildWhatsAppOrderUrl(subtotal) {
+function buildWhatsAppOrderUrl(subtotal, customerDetails) {
   const orderLines = cart.flatMap((item) => {
     const product = products.find((candidate) => candidate.id === item.id);
     if (!product) return [];
@@ -633,7 +650,7 @@ function buildWhatsAppOrderUrl(subtotal) {
     translate("orderSubtotal", { subtotal: formatPrice(subtotal) }),
     deliveryMessage,
     "",
-    translate("orderCustomerDetails"),
+    translate("orderCustomerDetails", customerDetails),
     translate("orderSizePrompt"),
     translate("orderConfirmPrompt"),
   ].join("\n");
@@ -653,7 +670,10 @@ function updateCart() {
   cartCount.setAttribute("aria-label", translate("cartItemCount", { count: formattedCount }));
   cartEmpty.hidden = cart.length > 0;
   cartFooter.hidden = cart.length === 0;
-  document.querySelector("#checkout-button").href = buildWhatsAppOrderUrl(subtotal);
+  if (cart.length === 0) {
+    checkoutForm.hidden = true;
+    checkoutButton.hidden = false;
+  }
   cartItemsContainer.innerHTML = cart
     .map((item) => {
       const product = products.find((candidate) => candidate.id === item.id);
@@ -855,6 +875,36 @@ document.querySelector("#clear-filters").addEventListener("click", () => {
 document.querySelector("#cart-open").addEventListener("click", openCart);
 document.querySelector("#cart-close").addEventListener("click", closeCart);
 cartBackdrop.addEventListener("click", closeCart);
+checkoutButton.addEventListener("click", () => {
+  checkoutButton.hidden = true;
+  checkoutForm.hidden = false;
+  checkoutName.focus();
+});
+document.querySelector("#checkout-back").addEventListener("click", () => {
+  checkoutForm.hidden = true;
+  checkoutButton.hidden = false;
+  checkoutButton.focus();
+});
+checkoutForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const customerDetails = {
+    name: checkoutName.value.trim(),
+    phone: document.querySelector("#checkout-phone").value.trim(),
+    address: document.querySelector("#checkout-address").value.trim(),
+  };
+  if (!customerDetails.name || !customerDetails.phone || !customerDetails.address) {
+    showToast(translate("requiredFields"));
+    return;
+  }
+
+  const subtotal = cart.reduce((total, item) => {
+    const product = products.find((candidate) => candidate.id === item.id);
+    return total + (product ? product.price * item.quantity : 0);
+  }, 0);
+  const orderWindow = window.open(buildWhatsAppOrderUrl(subtotal, customerDetails), "_blank");
+  if (orderWindow) orderWindow.opener = null;
+  else window.location.assign(buildWhatsAppOrderUrl(subtotal, customerDetails));
+});
 const imagePreview = document.querySelector("#image-preview");
 document.querySelector("#image-preview-close").addEventListener("click", () => {
   imagePreview.close();

@@ -9,6 +9,13 @@
       data-i18n-content="metaDescription"
     />
     <title>ستايلك | اختار اللي يشبهك</title>
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+    <link
+      rel="preload"
+      as="image"
+      href="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&amp;fit=crop&amp;w=1440&amp;q=70"
+      fetchpriority="high"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -95,6 +102,13 @@
 
     <main>
       <section class="hero page-width" aria-labelledby="hero-title">
+        <img
+          class="hero-image"
+          src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&amp;fit=crop&amp;w=1440&amp;q=70"
+          alt=""
+          fetchpriority="high"
+          decoding="async"
+        />
         <div class="hero-content">
           <p class="eyebrow" data-i18n="newSeason">تشكيلة الموسم الجديد</p>
           <h1 id="hero-title" data-i18n="heroTitle">ستايلك يبدأ<br />من اختيارك</h1>
@@ -313,14 +327,23 @@
       <div class="cart-footer" id="cart-footer" hidden>
         <div class="subtotal-row"><span data-i18n="subtotal">الإجمالي</span><strong id="cart-total">٠ ج.م</strong></div>
         <p data-i18n="shippingAtCheckout">الشحن والخصومات يتم حسابهم عند تأكيد الطلب.</p>
-        <a
+        <button
           class="checkout-button"
           id="checkout-button"
-          href="https://wa.me/201152183562"
-          target="_blank"
-          rel="noopener noreferrer"
+          type="button"
           data-i18n="continueToCheckout"
-        >كمّل طلبك</a>
+        >كمّل طلبك</button>
+        <form class="checkout-form" id="checkout-form" hidden>
+          <label for="checkout-name" data-i18n="customerName">الاسم</label>
+          <input id="checkout-name" name="name" type="text" autocomplete="name" required />
+          <label for="checkout-phone" data-i18n="phoneNumber">رقم الهاتف</label>
+          <input id="checkout-phone" name="phone" type="tel" autocomplete="tel" required />
+          <label for="checkout-address" data-i18n="fullAddress">العنوان بالتفصيل</label>
+          <textarea id="checkout-address" name="address" autocomplete="street-address" rows="3" required></textarea>
+          <p data-i18n="checkoutInstructions">هنفتح واتساب برسالة الطلب، والمتجر هيأكد تكلفة وموعد التوصيل.</p>
+          <button class="checkout-button" type="submit" data-i18n="sendOrder">إرسال الطلب عبر واتساب</button>
+          <button class="checkout-back-button" id="checkout-back" type="button" data-i18n="backToCart">العودة للسلة</button>
+        </form>
       </div>
     </aside>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>

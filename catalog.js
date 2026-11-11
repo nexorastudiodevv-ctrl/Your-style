@@ -11,7 +11,7 @@ window.STORE_PRODUCTS = [
     rating: "4.8",
     tag: "sale20",
     image:
-      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=70",
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ window.STORE_PRODUCTS = [
     rating: "4.7",
     tag: "featuredTag",
     image:
-      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=70",
   },
   {
     id: 3,
@@ -34,7 +34,7 @@ window.STORE_PRODUCTS = [
     rating: "4.9",
     tag: "new",
     image:
-      "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=600&q=70",
   },
   {
     id: 4,
@@ -45,7 +45,7 @@ window.STORE_PRODUCTS = [
     rating: "4.6",
     tag: "bestSeller",
     image:
-      "https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=600&q=70",
   },
   {
     id: 5,
@@ -57,7 +57,7 @@ window.STORE_PRODUCTS = [
     rating: "4.8",
     tag: "sale15",
     image:
-      "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=600&q=70",
   },
   {
     id: 7,
@@ -68,7 +68,7 @@ window.STORE_PRODUCTS = [
     rating: "4.9",
     tag: "new",
     image:
-      "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=600&q=70",
   },
   {
     id: 8,
@@ -80,7 +80,7 @@ window.STORE_PRODUCTS = [
     rating: "4.6",
     tag: "sale16",
     image:
-      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=70",
   },
   {
     id: 9,
@@ -91,7 +91,7 @@ window.STORE_PRODUCTS = [
     rating: "4.8",
     tag: "bestSeller",
     image:
-      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=70",
   },
   {
     id: 10,
@@ -103,7 +103,7 @@ window.STORE_PRODUCTS = [
     rating: "4.7",
     tag: "sale15",
     image:
-      "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&q=70",
   },
   {
     id: 11,
@@ -114,7 +114,7 @@ window.STORE_PRODUCTS = [
     rating: "4.5",
     tag: "todayPick",
     image:
-      "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=70",
   },
   {
     id: 12,
@@ -126,7 +126,7 @@ window.STORE_PRODUCTS = [
     rating: "4.7",
     tag: "sale18",
     image:
-      "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=600&q=70",
   },
   {
     id: 13,
@@ -142,28 +142,28 @@ window.STORE_PRODUCTS = [
       ar: "جميع المقاسات حتى وزن ١٢٠ كجم",
       en: "All sizes, up to 120 kg",
     },
-    image: "assets/products/dress-burgundy.png",
+    image: "assets/products/dress-burgundy.webp",
     images: [
       {
-        src: "assets/products/dress-burgundy.png",
+        src: "assets/products/dress-burgundy.webp",
         colorAr: "نبيتي",
         colorEn: "Burgundy",
         color: "#681c2b",
       },
       {
-        src: "assets/products/dress-brown.png",
+        src: "assets/products/dress-brown.webp",
         colorAr: "بني",
         colorEn: "Brown",
         color: "#503d36",
       },
       {
-        src: "assets/products/dress-black.png",
+        src: "assets/products/dress-black.webp",
         colorAr: "أسود",
         colorEn: "Black",
         color: "#161616",
       },
       {
-        src: "assets/products/dress-green.png",
+        src: "assets/products/dress-green.webp",
         colorAr: "أخضر",
         colorEn: "Green",
         color: "#075b4e",
@@ -185,22 +185,22 @@ window.STORE_PRODUCTS = [
       ar: "جميع المقاسات",
       en: "All sizes",
     },
-    image: "assets/products/princess-dress-black.png",
+    image: "assets/products/princess-dress-black.webp",
     images: [
       {
-        src: "assets/products/princess-dress-black.png",
+        src: "assets/products/princess-dress-black.webp",
         colorAr: "أسود",
         colorEn: "Black",
         color: "#171717",
       },
       {
-        src: "assets/products/princess-dress-burgundy.png",
+        src: "assets/products/princess-dress-burgundy.webp",
         colorAr: "نبيتي",
         colorEn: "Burgundy",
         color: "#691e2b",
       },
       {
-        src: "assets/products/princess-dress-teal.png",
+        src: "assets/products/princess-dress-teal.webp",
         colorAr: "بترولي",
         colorEn: "Teal",
         color: "#00565a",
@@ -222,10 +222,10 @@ window.STORE_PRODUCTS = [
       ar: "٢، ٤، ٦، ٨، ١٠، ١٢، ١٣",
       en: "2, 4, 6, 8, 10, 12, 13",
     },
-    image: "assets/products/kids-pink-summer-pajamas.png",
+    image: "assets/products/kids-pink-summer-pajamas.webp",
     images: [
       {
-        src: "assets/products/kids-pink-summer-pajamas.png",
+        src: "assets/products/kids-pink-summer-pajamas.webp",
         colorAr: "فوشيا",
         colorEn: "Fuchsia",
         color: "#e72783",
@@ -243,6 +243,6 @@ window.STORE_PRODUCTS = [
       "اختاري بيجامتين بيتي وخدي كاش طويل هدية. راحة وأناقة في إطلالة واحدة.",
     descriptionEn:
       "Choose two home pajama sets and get a long robe as a gift. Comfort and style in one look.",
-    image: "assets/products/home-pajama-bundle.png",
+    image: "assets/products/home-pajama-bundle.webp",
   },
 ];
