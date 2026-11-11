@@ -10,7 +10,7 @@
   --canvas: #f5f6f7;
   --line: #e7e9ec;
   --success: #25835a;
-  font-family: "Amiri", Tahoma, Arial, sans-serif;
+  font-family: Tahoma, Arial, sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 }

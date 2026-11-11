@@ -359,6 +359,32 @@ function getProductImages(product) {
   return product.images?.length ? product.images : [{ src: product.image }];
 }
 
+function getSizedUnsplashImage(source, width, quality) {
+  const imageUrl = new URL(source, document.baseURI);
+  if (imageUrl.hostname !== "images.unsplash.com") return source;
+
+  imageUrl.searchParams.delete("auto");
+  imageUrl.searchParams.set("fm", "webp");
+  imageUrl.searchParams.set("w", String(width));
+  imageUrl.searchParams.set("q", String(quality));
+  return imageUrl.href;
+}
+
+function getProductImageAttributes(source) {
+  const imageUrl = new URL(source, document.baseURI);
+  if (imageUrl.hostname !== "images.unsplash.com") return `src="${source}"`;
+
+  const srcset = [320, 480, 640]
+    .map((width) => {
+      const url = getSizedUnsplashImage(source, width, 60).replace(/&/g, "&amp;");
+      return `${url} ${width}w`;
+    })
+    .join(", ");
+  const src = getSizedUnsplashImage(source, 480, 60).replace(/&/g, "&amp;");
+
+  return `src="${src}" srcset="${srcset}" sizes="(max-width: 508px) calc((100vw - 46px) / 2), (max-width: 640px) 235px, (max-width: 900px) calc((100vw - 80px) / 3), 280px"`;
+}
+
 function renderPreviewImage() {
   if (!activePreviewProduct) return;
 
@@ -368,7 +394,7 @@ function renderPreviewImage() {
   const colorName = image.colorAr || image.colorEn ? getColorName(image) : "";
   const caption = colorName ? `${productName} - ${colorName}` : productName;
 
-  document.querySelector("#image-preview-photo").src = image.src;
+  document.querySelector("#image-preview-photo").src = getSizedUnsplashImage(image.src, 1200, 80);
   document.querySelector("#image-preview-photo").alt = caption;
   document.querySelector("#image-preview-caption").textContent = caption;
   document.querySelector("#image-preview-counter").textContent = translate("imageCounter", {
@@ -522,7 +548,7 @@ function productCard(product) {
         >
           <img
             class="product-image"
-            src="${product.image}"
+            ${getProductImageAttributes(product.image)}
             alt=""
             loading="lazy"
             decoding="async"
