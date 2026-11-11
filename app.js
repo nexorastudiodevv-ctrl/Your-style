@@ -12,9 +12,11 @@ const translations = {
     allCategories: "كل الأقسام",
     searchPlaceholder: "بتدور على إيه؟",
     search: "بحث",
+    statusMessages: "رسائل الحالة",
     account: "حسابي",
     welcome: "أهلاً بيك",
     openCart: "افتح سلة المشتريات",
+    openCartWithCount: "افتح سلة المشتريات، عدد المنتجات: {count}",
     yourCart: "مشترياتك",
     cartLabel: "السلة",
     mainCategories: "الأقسام الرئيسية",
@@ -156,9 +158,11 @@ const translations = {
     allCategories: "All categories",
     searchPlaceholder: "What are you looking for?",
     search: "Search",
+    statusMessages: "Status messages",
     account: "My account",
     welcome: "Welcome",
     openCart: "Open shopping cart",
+    openCartWithCount: "Open shopping cart, {count} items",
     yourCart: "Your orders",
     cartLabel: "Cart",
     mainCategories: "Main categories",
@@ -576,7 +580,7 @@ function productCard(product) {
             <a class="product-inquiry-link" href="${productInquiryUrl}" target="_blank" rel="noopener noreferrer">${translate("productInquiry")}</a>
           </div>
         </div>
-        ${product.rating ? `<p class="product-rating" aria-label="${ratingText}">★★★★★ <span>${product.rating}</span></p>` : ""}
+        ${product.rating ? `<p class="product-rating" role="img" aria-label="${ratingText}">★★★★★ <span>${product.rating}</span></p>` : ""}
         <div class="product-price-row">
           <span class="product-price">${formatPrice(product.price)}</span>
           ${product.oldPrice ? `<span class="old-price">${formatPrice(product.oldPrice)}</span>` : ""}
@@ -693,7 +697,11 @@ function updateCart() {
 
   const formattedCount = numberFormatter.format(itemCount);
   cartCount.textContent = formattedCount;
-  cartCount.setAttribute("aria-label", translate("cartItemCount", { count: formattedCount }));
+  cartCount.setAttribute("aria-hidden", "true");
+  document.querySelector("#cart-open").setAttribute(
+    "aria-label",
+    translate("openCartWithCount", { count: formattedCount }),
+  );
   cartEmpty.hidden = cart.length > 0;
   cartFooter.hidden = cart.length === 0;
   if (cart.length === 0) {
@@ -717,7 +725,7 @@ function updateCart() {
           <div>
             <h3 class="cart-item-title">${cartProductName}</h3>
             <p class="cart-item-price">${formatPrice(product.price)}</p>
-            <div class="quantity-controls" aria-label="${translate("quantity")}">
+            <div class="quantity-controls" role="group" aria-label="${translate("quantity")}">
               <button type="button" aria-label="${translate("decreaseQuantity")}" data-quantity="-1" data-id="${product.id}" data-variant="${item.variant}">−</button>
               <span>${numberFormatter.format(item.quantity)}</span>
               <button type="button" aria-label="${translate("increaseQuantity")}" data-quantity="1" data-id="${product.id}" data-variant="${item.variant}">＋</button>
@@ -958,6 +966,23 @@ document.querySelector("#language-toggle").addEventListener("click", () => {
 });
 
 document.addEventListener("keydown", (event) => {
+  if (event.key === "Tab" && cartPanel.classList.contains("is-open")) {
+    const focusableElements = [...cartPanel.querySelectorAll(
+      'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])',
+    )].filter((element) => !element.closest("[hidden]") && element.getClientRects().length > 0);
+    const firstElement = focusableElements[0];
+    const lastElement = focusableElements[focusableElements.length - 1];
+
+    if (event.shiftKey && (document.activeElement === firstElement || !cartPanel.contains(document.activeElement))) {
+      event.preventDefault();
+      lastElement?.focus();
+    } else if (!event.shiftKey && (document.activeElement === lastElement || !cartPanel.contains(document.activeElement))) {
+      event.preventDefault();
+      firstElement?.focus();
+    }
+    return;
+  }
+
   if (imagePreview.open && event.key === "ArrowLeft") {
     event.preventDefault();
     changePreviewImage(-1);

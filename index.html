@@ -34,7 +34,13 @@
           <span class="brand-name" data-i18n="brandName">ستايلك</span><span class="brand-dot">.</span>
         </a>
 
-        <form class="search" id="search-form" role="search">
+        <form
+          class="search"
+          id="search-form"
+          role="search"
+          aria-label="ابحث عن منتج"
+          data-i18n-aria-label="searchForProduct"
+        >
           <label class="sr-only" for="search-input" data-i18n="searchForProduct">ابحث عن منتج</label>
           <select id="search-category" aria-label="قسم البحث" data-i18n-aria-label="searchCategory">
             <option value="all" data-i18n="allCategories">كل الأقسام</option>
@@ -76,7 +82,7 @@
           >
             <span class="cart-icon" aria-hidden="true">🛍</span>
             <span><small data-i18n="yourCart">مشترياتك</small><strong data-i18n="cartLabel">السلة</strong></span>
-            <span class="cart-count" id="cart-count">0</span>
+            <span class="cart-count" id="cart-count" aria-hidden="true">0</span>
           </button>
         </div>
       </div>
@@ -183,7 +189,12 @@
             </select>
           </label>
         </div>
-        <div class="filter-chips" aria-label="تصفية المنتجات حسب القسم" data-i18n-aria-label="filterByCategory">
+        <div
+          class="filter-chips"
+          role="group"
+          aria-label="تصفية المنتجات حسب القسم"
+          data-i18n-aria-label="filterByCategory"
+        >
           <button class="filter-chip is-active" type="button" data-category="all" aria-pressed="true" data-i18n="all">الكل</button>
           <button class="filter-chip" type="button" data-category="men" aria-pressed="false" data-i18n="men">رجالي</button>
           <button class="filter-chip" type="button" data-category="women" aria-pressed="false" data-i18n="women">حريمي</button>
@@ -344,7 +355,14 @@
         </form>
       </div>
     </aside>
-    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <div
+      class="toast"
+      id="toast"
+      role="status"
+      aria-live="polite"
+      aria-label="رسائل الحالة"
+      data-i18n-aria-label="statusMessages"
+    ></div>
     <dialog class="image-preview" id="image-preview" aria-labelledby="image-preview-caption">
       <button
         class="image-preview-close"

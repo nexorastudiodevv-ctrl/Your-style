@@ -1,11 +1,11 @@
 :root {
   color-scheme: light;
   --ink: #202a35;
-  --muted: #737d88;
+  --muted: #5f6973;
   --navy: #172a3a;
   --navy-deep: #102130;
   --accent: #e89a35;
-  --accent-dark: #cb781b;
+  --accent-dark: #9a5708;
   --paper: #ffffff;
   --canvas: #f5f6f7;
   --line: #e7e9ec;
@@ -43,6 +43,16 @@ textarea {
 button,
 a {
   -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px var(--navy);
 }
 
 button {
@@ -563,13 +573,13 @@ a {
 
 .category-card small {
   margin-top: 2px;
-  color: var(--muted);
+  color: #5f6973;
   font-size: 10px;
 }
 
 .category-arrow {
   margin-inline-start: auto;
-  color: #6b7780;
+  color: #53606a;
   font-size: 15px;
 }
 
@@ -714,7 +724,7 @@ a {
   place-items: center;
   border: 1px solid rgb(255 255 255 / 70%);
   border-radius: 50%;
-  background: rgb(23 42 58 / 78%);
+  background: var(--navy);
   color: #fff;
   font-family: Arial, sans-serif;
   font-size: 23px;
@@ -772,7 +782,7 @@ a {
 
 .product-info-label {
   flex: 0 0 auto;
-  color: #78838b;
+  color: #5d6871;
   font-size: 9px;
   font-weight: 700;
 }
@@ -836,7 +846,7 @@ a {
 
 .product-category {
   margin: 0 0 3px;
-  color: #8a939b;
+  color: #5f6973;
   font-size: 9px;
 }
 
@@ -859,7 +869,7 @@ a {
 
 .product-rating span {
   margin-inline-start: 5px;
-  color: #89929a;
+  color: #5f6973;
   font-size: 9px;
   letter-spacing: 0;
 }
@@ -878,7 +888,7 @@ a {
 }
 
 .old-price {
-  color: #a3a8ae;
+  color: #65717a;
   font-size: 10px;
   text-decoration: line-through;
 }
@@ -1292,13 +1302,13 @@ a {
   padding: 4px;
   border: 0;
   background: transparent;
-  color: #a1a8ae;
+  color: #65717a;
   font-size: 17px;
   cursor: pointer;
 }
 
 .remove-item:hover {
-  color: #c45050;
+  color: #a72f2f;
 }
 
 .cart-empty {
@@ -1549,7 +1559,7 @@ a {
   padding: 10px 17px;
   border: 1px solid rgb(255 255 255 / 28%);
   border-radius: 999px;
-  background: #20b968;
+  background: #087a3e;
   color: #fff;
   font-size: 13px;
   font-weight: 700;
@@ -1559,7 +1569,7 @@ a {
 
 .whatsapp-button:hover {
   transform: translateY(-2px);
-  background: #169e56;
+  background: #076b36;
   box-shadow: 0 8px 22px rgb(22 130 74 / 36%);
 }
 
