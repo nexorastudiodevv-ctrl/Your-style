@@ -42,13 +42,13 @@ const translations = {
     aboutEyebrow: "اختيارات لكل أفراد الأسرة",
     aboutTitle: "ستايلك، أسهل في اختيارك",
     aboutDescription:
-      "في ستايلك بنسهّل عليك اختيار الملابس والأحذية والشنط ليك ولأسرتك من مكان واحد. استكشف تشكيلة متنوعة من المنتجات والعروض، واطّلع على التفاصيل المتاحة لكل منتج، واسألنا مباشرة عبر واتساب قبل تأكيد طلبك.",
+      "في ستايلك بنسهّل عليك اختيار الملابس والأحذية والشنط ليك ولأسرتك من مكان واحد. استكشف تشكيلة متنوعة من المنتجات والعروض، واطّلع على التفاصيل المتاحة لكل منتج.",
     aboutFamilyTitle: "لكل أفراد الأسرة",
     aboutFamilyDescription: "ملابس رجالي وحريمي وأطفال، مع الشنط والأحذية.",
     aboutBilingualTitle: "تسوّق بلغتك",
     aboutBilingualDescription: "تصفّح المتجر بالعربية أو الإنجليزية.",
-    aboutSupportTitle: "تواصل مباشر",
-    aboutSupportDescription: "اسأل عن المقاسات والألوان والتوفر عبر واتساب.",
+    aboutSupportTitle: "تفاصيل واضحة",
+    aboutSupportDescription: "اطّلع على المقاسات والألوان والكمية المتاحة لكل منتج.",
     everydayStyle: "ستايل لكل يوم",
     yourStyle: "اختيارات على ذوقك",
     colorsAndJoy: "ألوان وفرحة",
@@ -71,10 +71,8 @@ const translations = {
     deliveryAndReturns: "التوصيل والاستبدال",
     deliveryInfoTitle: "التوصيل",
     deliveryInfo: "تكلفة الشحن [تكلفة الشحن]، ومدة التوصيل [مدة التوصيل]. الشحن مجاني للطلبات من ١٥٠٠ جنيه.",
-    askAboutDelivery: "اسأل عن تفاصيل التوصيل",
     returnInfoTitle: "الاستبدال",
     returnInfo: "يمكنك طلب الاستبدال خلال [مدة الاستبدال] وفق الشروط التالية: [شروط الاستبدال].",
-    askAboutReturns: "اسأل عن شروط الاستبدال",
     paymentMethodsTitle: "طرق الدفع",
     paymentMethodsInfo: "[الدفع عند الاستلام / فودافون كاش / ...]",
     reviewsEyebrow: "تجارب تسعدنا",
@@ -94,23 +92,8 @@ const translations = {
     subtotal: "الإجمالي",
     shippingAtCheckout: "الشحن والخصومات يتم حسابهم عند تأكيد الطلب.",
     continueToCheckout: "كمّل طلبك",
-    orderMessageGreeting: "السلام عليكم، أريد تأكيد طلب من متجر ستايلك:",
-    orderLine: "• {name} × {quantity} — {unitPrice} للوحدة، الإجمالي {lineTotal}",
-    orderSubtotal: "إجمالي المنتجات قبل التوصيل: {subtotal}",
-    orderFreeDelivery: "التوصيل مجاني للطلبات من ١٥٠٠ جنيه.",
-    orderDeliveryToConfirm: "تكلفة وموعد التوصيل يتأكدان مع المتجر.",
-    orderCustomerDetails: "الاسم: {name}\nرقم الهاتف: {phone}\nالمحافظة: {governorate}\nالعنوان بالتفصيل: {address}",
-    customerName: "الاسم",
-    phoneNumber: "رقم الهاتف",
-    governorate: "المحافظة",
-    selectGovernorate: "اختر المحافظة",
-    fullAddress: "العنوان بالتفصيل",
-    checkoutInstructions: "هنفتح واتساب برسالة الطلب، والمتجر هيأكد تكلفة وموعد التوصيل.",
-    sendOrder: "إرسال الطلب عبر واتساب",
+    checkoutInstructions: "إرسال الطلب الإلكتروني غير متاح في هذه النسخة.",
     backToCart: "العودة للسلة",
-    requiredFields: "من فضلك راجع الاسم ورقم الهاتف والمحافظة والعنوان.",
-    orderSizePrompt: "المقاس المطلوب لكل منتج:",
-    orderConfirmPrompt: "برجاء تأكيد توفر المقاسات والطلب.",
     sale20: "خصم ٢٠٪",
     sale15: "خصم ١٥٪",
     sale16: "خصم ١٦٪",
@@ -130,13 +113,11 @@ const translations = {
     availableColors: "الألوان المتاحة",
     productColors: "الألوان",
     productSizes: "المقاسات",
-    askForSizes: "تواصل لمعرفة المقاسات",
-    askForColors: "تواصل لمعرفة الألوان",
-    askForStock: "اسأل عن الكمية المتاحة",
+    askForSizes: "راجع المقاسات عند توفرها",
+    askForColors: "ألوان المنتج",
+    askForStock: "يتم تأكيد الكمية عند الطلب",
     stockCount: "الكمية المتاحة: {count}",
     outOfStock: "غير متوفر حاليًا",
-    productInquiry: "اسأل عن المقاسات والمخزون",
-    productInquiryMessage: "السلام عليكم، أريد معرفة المقاسات والألوان والكمية المتاحة للمنتج: {name}",
     selectColor: "اختيار اللون {color}",
     favorite: "أضف {name} للمفضلة",
     addToCart: "أضف للسلة",
@@ -157,8 +138,6 @@ const translations = {
     languageSaveError: "تغيرت اللغة، لكن تعذر حفظ اختيارك على هذا الجهاز.",
     language: "اللغة",
     switchLanguage: "Switch language to English",
-    whatsappContact: "تواصل معنا عبر واتساب",
-    whatsappLabel: "راسلنا واتساب",
   },
   en: {
     pageTitle: "Setaylak | Find your style",
@@ -203,13 +182,13 @@ const translations = {
     aboutEyebrow: "Picks for the whole family",
     aboutTitle: "Setaylak makes choosing easier",
     aboutDescription:
-      "Setaylak makes it easy to browse clothes, shoes, and bags for you and your family in one place. Explore a varied selection and current offers, check the details available for each product, and message us on WhatsApp with questions before confirming your order.",
+      "Setaylak makes it easy to browse clothes, shoes, and bags for you and your family in one place. Explore a varied selection and current offers, and check the details available for each product.",
     aboutFamilyTitle: "For the whole family",
     aboutFamilyDescription: "Men's, women's, and kids' clothing, plus bags and shoes.",
     aboutBilingualTitle: "Shop in your language",
     aboutBilingualDescription: "Browse the store in Arabic or English.",
-    aboutSupportTitle: "Direct contact",
-    aboutSupportDescription: "Ask about sizes, colors, and availability on WhatsApp.",
+    aboutSupportTitle: "Product details",
+    aboutSupportDescription: "Review the sizes, colors, and availability listed for each product.",
     everydayStyle: "Everyday style",
     yourStyle: "Picked for your style",
     colorsAndJoy: "Color and fun",
@@ -232,10 +211,8 @@ const translations = {
     deliveryAndReturns: "Delivery & exchanges",
     deliveryInfoTitle: "Delivery",
     deliveryInfo: "Shipping costs [shipping cost], and delivery takes [delivery time]. Free shipping on orders of EGP 1,500 or more.",
-    askAboutDelivery: "Ask about delivery",
     returnInfoTitle: "Exchanges",
     returnInfo: "You can request an exchange within [exchange period], subject to: [exchange conditions].",
-    askAboutReturns: "Ask about exchange terms",
     paymentMethodsTitle: "Payment methods",
     paymentMethodsInfo: "[Cash on delivery / Vodafone Cash / ...]",
     reviewsEyebrow: "Your experience matters",
@@ -255,23 +232,8 @@ const translations = {
     subtotal: "Subtotal",
     shippingAtCheckout: "Shipping and discounts are calculated at checkout.",
     continueToCheckout: "Continue to checkout",
-    orderMessageGreeting: "Hello, I'd like to place an order with Setaylak:",
-    orderLine: "• {name} × {quantity} — {unitPrice} each, total {lineTotal}",
-    orderSubtotal: "Product subtotal before delivery: {subtotal}",
-    orderFreeDelivery: "Delivery is free on orders of EGP 1,500 or more.",
-    orderDeliveryToConfirm: "Please confirm delivery cost and timing with the store.",
-    orderCustomerDetails: "Name: {name}\nPhone number: {phone}\nGovernorate: {governorate}\nFull address: {address}",
-    customerName: "Name",
-    phoneNumber: "Phone number",
-    governorate: "Governorate",
-    selectGovernorate: "Select a governorate",
-    fullAddress: "Full address",
-    checkoutInstructions: "We'll open WhatsApp with your order. The store will confirm delivery cost and timing.",
-    sendOrder: "Send order on WhatsApp",
+    checkoutInstructions: "Online order submission is unavailable in this version.",
     backToCart: "Back to cart",
-    requiredFields: "Please check your name, phone number, governorate, and address.",
-    orderSizePrompt: "Requested size for each product:",
-    orderConfirmPrompt: "Please confirm size availability and the order.",
     sale20: "20% off",
     sale15: "15% off",
     sale16: "16% off",
@@ -291,13 +253,11 @@ const translations = {
     availableColors: "Available colors",
     productColors: "Colors",
     productSizes: "Sizes",
-    askForSizes: "Ask us about available sizes",
-    askForColors: "Ask us about available colors",
-    askForStock: "Ask about available quantity",
+    askForSizes: "Check sizes when available",
+    askForColors: "Product colors",
+    askForStock: "Quantity is confirmed when ordering",
     stockCount: "Available quantity: {count}",
     outOfStock: "Currently unavailable",
-    productInquiry: "Ask about sizes & stock",
-    productInquiryMessage: "Hello, I'd like to know the available sizes, colors, and quantity for: {name}",
     selectColor: "Select the {color} color",
     favorite: "Add {name} to favorites",
     addToCart: "Add to cart",
@@ -318,43 +278,12 @@ const translations = {
     languageSaveError: "The language changed, but couldn't be saved on this device.",
     switchLanguage: "التبديل إلى العربية",
     language: "Language",
-    whatsappContact: "Contact us on WhatsApp",
-    whatsappLabel: "Chat on WhatsApp",
   },
 };
 
 // بيانات المنتجات قابلة للتعديل دون لمس منطق البحث والسلة في catalog.js.
 const products = window.STORE_PRODUCTS;
 const FREE_SHIPPING_THRESHOLD = 1500;
-const governorates = [
-  { value: "cairo", nameAr: "القاهرة", nameEn: "Cairo" },
-  { value: "giza", nameAr: "الجيزة", nameEn: "Giza" },
-  { value: "alexandria", nameAr: "الإسكندرية", nameEn: "Alexandria" },
-  { value: "dakahlia", nameAr: "الدقهلية", nameEn: "Dakahlia" },
-  { value: "red-sea", nameAr: "البحر الأحمر", nameEn: "Red Sea" },
-  { value: "beheira", nameAr: "البحيرة", nameEn: "Beheira" },
-  { value: "fayoum", nameAr: "الفيوم", nameEn: "Fayoum" },
-  { value: "gharbia", nameAr: "الغربية", nameEn: "Gharbia" },
-  { value: "ismailia", nameAr: "الإسماعيلية", nameEn: "Ismailia" },
-  { value: "monufia", nameAr: "المنوفية", nameEn: "Monufia" },
-  { value: "minya", nameAr: "المنيا", nameEn: "Minya" },
-  { value: "qalyubia", nameAr: "القليوبية", nameEn: "Qalyubia" },
-  { value: "new-valley", nameAr: "الوادي الجديد", nameEn: "New Valley" },
-  { value: "suez", nameAr: "السويس", nameEn: "Suez" },
-  { value: "aswan", nameAr: "أسوان", nameEn: "Aswan" },
-  { value: "asyut", nameAr: "أسيوط", nameEn: "Asyut" },
-  { value: "beni-suef", nameAr: "بني سويف", nameEn: "Beni Suef" },
-  { value: "port-said", nameAr: "بورسعيد", nameEn: "Port Said" },
-  { value: "damietta", nameAr: "دمياط", nameEn: "Damietta" },
-  { value: "sharqia", nameAr: "الشرقية", nameEn: "Sharqia" },
-  { value: "south-sinai", nameAr: "جنوب سيناء", nameEn: "South Sinai" },
-  { value: "kafr-el-sheikh", nameAr: "كفر الشيخ", nameEn: "Kafr El Sheikh" },
-  { value: "matrouh", nameAr: "مطروح", nameEn: "Matrouh" },
-  { value: "luxor", nameAr: "الأقصر", nameEn: "Luxor" },
-  { value: "qena", nameAr: "قنا", nameEn: "Qena" },
-  { value: "north-sinai", nameAr: "شمال سيناء", nameEn: "North Sinai" },
-  { value: "sohag", nameAr: "سوهاج", nameEn: "Sohag" },
-];
 const testimonials = [
   {
     nameAr: "[اسم العميل]",
@@ -400,8 +329,6 @@ const cartEmpty = document.querySelector("#cart-empty");
 const cartFooter = document.querySelector("#cart-footer");
 const checkoutButton = document.querySelector("#checkout-button");
 const checkoutForm = document.querySelector("#checkout-form");
-const checkoutName = document.querySelector("#checkout-name");
-const checkoutGovernorate = document.querySelector("#checkout-governorate");
 const cartCount = document.querySelector("#cart-count");
 const cartTotal = document.querySelector("#cart-total");
 const shippingProgressMessage = document.querySelector("#shipping-progress-message");
@@ -516,25 +443,6 @@ function formatPrice(price) {
     : currencyFormatter.format(price);
 }
 
-function renderGovernorates() {
-  const selectedValue = checkoutGovernorate.value;
-  checkoutGovernorate.replaceChildren();
-
-  const placeholder = document.createElement("option");
-  placeholder.value = "";
-  placeholder.textContent = translate("selectGovernorate");
-  checkoutGovernorate.append(placeholder);
-
-  governorates.forEach((governorate) => {
-    const option = document.createElement("option");
-    option.value = governorate.value;
-    option.textContent =
-      currentLanguage === "ar" ? governorate.nameAr : governorate.nameEn;
-    checkoutGovernorate.append(option);
-  });
-  checkoutGovernorate.value = selectedValue;
-}
-
 function renderTestimonials() {
   const reviewsGrid = document.querySelector("#reviews-grid");
   reviewsGrid.replaceChildren();
@@ -594,8 +502,6 @@ function applyLanguage() {
   document.querySelectorAll("[data-i18n-content]").forEach((element) => {
     element.setAttribute("content", translate(element.dataset.i18nContent));
   });
-  renderGovernorates();
-
   const languageButton = document.querySelector("#language-toggle");
   languageButton.textContent = isArabic ? "EN" : "عربي";
   languageButton.setAttribute("aria-label", translate("switchLanguage"));
@@ -650,9 +556,6 @@ function productCard(product) {
     currentLanguage === "ar" ? product.descriptionAr : product.descriptionEn;
   const productImages = product.images || [];
   const productSizes = product.sizes?.[currentLanguage];
-  const productInquiryUrl = `https://wa.me/201152183562?text=${encodeURIComponent(
-    translate("productInquiryMessage", { name: productName }),
-  )}`;
   const colorSwatches =
     productImages.length > 1
       ? `
@@ -718,7 +621,6 @@ function productCard(product) {
           </div>
           <div class="product-stock-row">
             <span class="product-info-value">${product.stockCount === 0 ? translate("outOfStock") : Number.isInteger(product.stockCount) ? translate("stockCount", { count: numberFormatter.format(product.stockCount) }) : translate("askForStock")}</span>
-            <a class="product-inquiry-link" href="${productInquiryUrl}" target="_blank" rel="noopener noreferrer">${translate("productInquiry")}</a>
           </div>
         </div>
         ${product.rating ? `<p class="product-rating" role="img" aria-label="${ratingText}">★★★★★ <span>${product.rating}</span></p>` : ""}
@@ -801,43 +703,6 @@ function showToast(message) {
   toastTimeout = window.setTimeout(() => {
     toast.classList.remove("is-visible");
   }, 2400);
-}
-
-function buildWhatsAppOrderUrl(subtotal, customerDetails) {
-  const orderLines = cart.flatMap((item) => {
-    const product = products.find((candidate) => candidate.id === item.id);
-    if (!product) return [];
-
-    const selectedImage = getProductImages(product)[item.variant];
-    const selectedColor =
-      selectedImage?.colorAr || selectedImage?.colorEn
-        ? ` - ${getColorName(selectedImage)}`
-        : "";
-
-    return translate("orderLine", {
-      name: `${getProductName(product)}${selectedColor}`,
-      quantity: numberFormatter.format(item.quantity),
-      unitPrice: formatPrice(product.price),
-      lineTotal: formatPrice(product.price * item.quantity),
-    });
-  });
-  const deliveryMessage =
-    subtotal >= FREE_SHIPPING_THRESHOLD
-      ? translate("orderFreeDelivery")
-      : translate("orderDeliveryToConfirm");
-  const message = [
-    translate("orderMessageGreeting"),
-    ...orderLines,
-    "",
-    translate("orderSubtotal", { subtotal: formatPrice(subtotal) }),
-    deliveryMessage,
-    "",
-    translate("orderCustomerDetails", customerDetails),
-    translate("orderSizePrompt"),
-    translate("orderConfirmPrompt"),
-  ].join("\n");
-
-  return `https://wa.me/201152183562?text=${encodeURIComponent(message)}`;
 }
 
 function updateCart() {
@@ -1084,41 +949,11 @@ cartBackdrop.addEventListener("click", closeCart);
 checkoutButton.addEventListener("click", () => {
   checkoutButton.hidden = true;
   checkoutForm.hidden = false;
-  checkoutName.focus();
 });
 document.querySelector("#checkout-back").addEventListener("click", () => {
   checkoutForm.hidden = true;
   checkoutButton.hidden = false;
   checkoutButton.focus();
-});
-checkoutForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const customerDetails = {
-    name: checkoutName.value.trim(),
-    phone: document.querySelector("#checkout-phone").value.trim(),
-    governorate:
-      governorates.find(({ value }) => value === checkoutGovernorate.value)?.[
-        currentLanguage === "ar" ? "nameAr" : "nameEn"
-      ] || "",
-    address: document.querySelector("#checkout-address").value.trim(),
-  };
-  if (
-    !customerDetails.name ||
-    !customerDetails.phone ||
-    !customerDetails.governorate ||
-    !customerDetails.address
-  ) {
-    showToast(translate("requiredFields"));
-    return;
-  }
-
-  const subtotal = cart.reduce((total, item) => {
-    const product = products.find((candidate) => candidate.id === item.id);
-    return total + (product ? product.price * item.quantity : 0);
-  }, 0);
-  const orderWindow = window.open(buildWhatsAppOrderUrl(subtotal, customerDetails), "_blank");
-  if (orderWindow) orderWindow.opener = null;
-  else window.location.assign(buildWhatsAppOrderUrl(subtotal, customerDetails));
 });
 const imagePreview = document.querySelector("#image-preview");
 document.querySelector("#image-preview-close").addEventListener("click", () => {
